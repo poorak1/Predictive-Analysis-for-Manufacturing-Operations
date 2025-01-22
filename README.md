@@ -23,3 +23,12 @@ This project is a small machine learning application that predicts the repair co
 2. **Upload a CSV file**:
 - Use the ```bash /upload ``` endpoint to upload a CSV file containing defect data
 - Example using ```curl```:
+  ```bash
+  curl -X POST "http://127.0.0.1:8000/upload" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@path/to/your/file.csv"
+  ```
+3. **Train the model**:
+- Use the ```/train``` endpoint to train the model using the uploaded CSV file.
+- Example using ```curl```:
+  ```bash
+ curl -X POST "http://127.0.0.1:8000/train?csv_name=UPLOADED_CSV_NAME" -H "accept: application/json" -H "Content-Type: application/json"
+ ```
