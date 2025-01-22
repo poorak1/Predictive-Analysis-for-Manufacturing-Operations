@@ -10,8 +10,16 @@ This project is a small machine learning application that predicts the repair co
 
 ## Installation
 
-1. **Clone the repository**:
+1. **Dependencies**:
    ```bash
-   git clone https://github.com/yourusername/defect-repair-cost-prediction.git
-   cd defect-repair-cost-prediction
+   pip install fastapi uvicorn pandas scikit-learn numpy python-multipart
    ```
+## Usage
+
+1. **Run the FASTAPI server**:
+```bash
+   uvicorn endpoint:app --reload
+   ```
+2. **Upload a CSV file**:
+- Use the ```bash /upload ``` endpoint to upload a CSV file containing defect data
+- Example using ```curl```:
